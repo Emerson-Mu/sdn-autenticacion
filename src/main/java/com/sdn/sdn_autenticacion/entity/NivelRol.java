@@ -1,9 +1,8 @@
 package com.sdn.sdn_autenticacion.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "nivel_rol")
@@ -14,6 +13,9 @@ public class NivelRol {
 
     @Column(name = "Nombre", length = 45)
     private String nombre;
+
+    @OneToMany(mappedBy = "nivelRolIdnivel")
+    private Set<Rol> rols = new LinkedHashSet<>();
 
     public Integer getId() {
         return id;
@@ -29,6 +31,14 @@ public class NivelRol {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Set<Rol> getRols() {
+        return rols;
+    }
+
+    public void setRols(Set<Rol> rols) {
+        this.rols = rols;
     }
 
 }

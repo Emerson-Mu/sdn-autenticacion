@@ -19,6 +19,10 @@ public class UsuarioAuth {
     private String usuarioAuthcol;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "Equipos_Registrados_Mac_dispositivo", nullable = false)
+    private EquiposRegistrados equiposRegistradosMacDispositivo;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "Rol_idRol", nullable = false)
     private Rol rolIdrol;
 
@@ -52,6 +56,14 @@ public class UsuarioAuth {
 
     public void setUsuarioAuthcol(String usuarioAuthcol) {
         this.usuarioAuthcol = usuarioAuthcol;
+    }
+
+    public EquiposRegistrados getEquiposRegistradosMacDispositivo() {
+        return equiposRegistradosMacDispositivo;
+    }
+
+    public void setEquiposRegistradosMacDispositivo(EquiposRegistrados equiposRegistradosMacDispositivo) {
+        this.equiposRegistradosMacDispositivo = equiposRegistradosMacDispositivo;
     }
 
     public Rol getRolIdrol() {
