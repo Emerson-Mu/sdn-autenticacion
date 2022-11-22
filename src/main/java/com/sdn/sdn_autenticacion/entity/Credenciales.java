@@ -1,15 +1,13 @@
 package com.sdn.sdn_autenticacion.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "credenciales")
 public class Credenciales {
     @Id
-    @Column(name = "idCredenciales", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_credenciales", nullable = false)
     private Integer id;
 
     @Column(name = "nombre", length = 45)

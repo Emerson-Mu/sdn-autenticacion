@@ -6,24 +6,24 @@ import javax.persistence.*;
 @Table(name = "usuario_auth")
 public class UsuarioAuth {
     @Id
-    @Column(name = "idUsuario_Auth", nullable = false)
+    @Column(name = "id_usuario_auth", nullable = false)
     private Integer id;
 
-    @Column(name = "Switch_Actual", length = 30)
+    @Column(name = "switch_actual", length = 30)
     private String switchActual;
 
     @Column(name = "puerto")
     private Integer puerto;
 
-    @Column(name = "Usuario_Authcol", length = 45)
+    @Column(name = "usuario_authcol", length = 45)
     private String usuarioAuthcol;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "Equipos_Registrados_Mac_dispositivo", nullable = false)
+    @JoinColumn(name = "equipos_registrados_mac_dispositivo", nullable = false)
     private EquiposRegistrados equiposRegistradosMacDispositivo;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "Rol_idRol", nullable = false)
+    @JoinColumn(name = "rol_id_rol", nullable = false)
     private Rol rolIdrol;
 
     public Integer getId() {

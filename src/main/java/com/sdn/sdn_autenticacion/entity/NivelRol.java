@@ -8,10 +8,10 @@ import java.util.Set;
 @Table(name = "nivel_rol")
 public class NivelRol {
     @Id
-    @Column(name = "idNivel", nullable = false)
+    @Column(name = "id_nivel", nullable = false)
     private Integer id;
 
-    @Column(name = "Nombre", length = 45)
+    @Column(name = "nombre", length = 45)
     private String nombre;
 
     @OneToMany(mappedBy = "nivelRolIdnivel")
