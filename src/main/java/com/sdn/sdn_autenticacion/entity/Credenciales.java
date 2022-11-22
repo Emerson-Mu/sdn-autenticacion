@@ -10,7 +10,7 @@ public class Credenciales {
     @Column(name = "id_credenciales", nullable = false)
     private Integer id;
 
-    @Column(name = "nombre", length = 45)
+    @Column(name = "nombre", length = 45,unique=true)
     private String nombre;
 
     @Column(name = "password", length = 45)

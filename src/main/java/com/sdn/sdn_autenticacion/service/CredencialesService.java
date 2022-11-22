@@ -30,5 +30,9 @@ public class CredencialesService {
         return credencialesRepository.findById(id);
     }
 
+    /*public Optional<Credenciales> buscarCredencialPorNombre(String nombre){
+        return credencialesRepository.
+    }*/
+
 
 }
